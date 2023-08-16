@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/login">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SIGN-UP"
+    android:layout_centerHorizontal="true"
+    android:textSize="30dp"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:layout_marginTop="30sp"
+    android:fontFamily="sans-serif-medium"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+
+
+    <EditText
+        android:id="@+id/et_fullName"
+        android:hint="Full Name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        android:background="@drawable/et_style"
+        android:drawableStart="@drawable/ic_username"
+        android:drawablePadding="5dp"
+        android:textSize="18sp"/>
+    <EditText
+        android:layout_marginTop="12dp"
+        android:id="@+id/et_displayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Display Name"
+        android:padding="9dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/et_style"
+        android:drawableStart="@drawable/ic_name"
+        android:drawablePadding="5dp"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Email"
+        android:padding="9dp"
+        android:background="@drawable/et_style"
+        android:drawableStart="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        android:drawablePadding="5dp"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        android:background="@drawable/et_style"
+        android:drawableStart="@drawable/ic_password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:drawablePadding="5dp"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_style"
+        android:layout_marginHorizontal="50dp"
+        android:text="Sign-up"
+        android:textSize="18sp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_switchLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Log in here"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+</RelativeLayout>

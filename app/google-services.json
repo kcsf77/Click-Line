@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24221761491",
+    "project_id": "clickline-4e642",
+    "storage_bucket": "clickline-4e642.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24221761491:android:56b6e77e8e5170d0cc3926",
+        "android_client_info": {
+          "package_name": "com.example.clickline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24221761491-2ju6tll4qmm30j4597ke3t26100mgfdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuZFFghRQRJVduHgksrp-5VHz0RZlq73g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24221761491-2ju6tll4qmm30j4597ke3t26100mgfdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

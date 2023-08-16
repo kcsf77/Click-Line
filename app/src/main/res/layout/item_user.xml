@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/profile_icon" />
+
+    <TextView
+        android:id="@+id/pfull_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/profile"
+        android:text="Username"
+        android:textColor="#101010"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pfull_Name"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/profile"
+        android:text="Email"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:text="follow"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_following"
+        android:text="following"
+        android:layout_alignParentEnd="true"
+        android:minWidth="100dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/button_following"
+        android:textColor="@android:color/holo_red_dark"/>
+
+
+
+
+
+
+</RelativeLayout>

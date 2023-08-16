@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Feed_Fragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_toolbar"
+            android:background="#F8F8FF"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/feed_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/profile_icon"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="1dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:text="Feed"
+                    android:fontFamily="fantasy"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+
+
+                <ImageView
+                    android:id="@+id/add_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/search_user"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="45dp"
+                    android:background="@drawable/add_style"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_add"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/search_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/add_style"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/black" />
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        tools:listitem="@layout/item_post"
+        android:layout_below="@+id/appbar"/>
+
+
+</RelativeLayout>

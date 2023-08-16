@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPost_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/search_toolbar"
+            android:background="#3F575B"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <TextView
+                    android:id="@+id/cancel_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_alignParentEnd="true"/>
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/appbar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/description_style"
+        android:gravity="start"
+        android:hint="Say Something about this photo"
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="10dp" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/cardview"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/description">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+                <ImageView
+                    android:id="@+id/selected_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_add"
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/pick_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/cardview"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/button_style"
+        android:backgroundTint="#E0E0E0"
+        android:text="PICK IMAGE FROM GALLERY"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

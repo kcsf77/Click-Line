@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comment_Activity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3F575B"
+            app:title="Comments"
+            app:titleTextColor="@color/white"
+            android:id="@+id/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/linLay"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/description_style"
+        android:layout_height="wrap_content"
+        android:id="@+id/linLay"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_icon"
+            android:padding="5dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/black"
+            android:id="@+id/profile_image_comments"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/input_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/send"
+                android:hint="type comment"
+                android:inputType="textMultiLine|text"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_send"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="3dp"
+                android:id="@+id/send"
+                android:layout_centerVertical="true"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

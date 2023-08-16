@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/feed"
+        android:visible="true"
+        android:title="Feed"
+        android:icon="@drawable/ic_feed"/>
+
+    <item android:id="@+id/following"
+        android:title="Following"
+        android:visible="true"
+        android:icon="@drawable/ic_following"/>
+
+    <item
+        android:id="@+id/favorites"
+        android:title="Favorites"
+        android:visible="true"
+        android:icon="@drawable/ic_favorites"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:visible="true"
+        android:icon="@drawable/ic_profile"/>
+
+
+
+</menu>

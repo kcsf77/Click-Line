@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Profile_Fragment">
+
+
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#1CA7E6"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/return_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white" />
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp"
+        android:src="@drawable/profile_icon">
+
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:layout_alignStart="@+id/profile"
+        android:layout_alignEnd="@+id/profile"
+        android:layout_marginStart="-52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-52dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:text="Following"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/following_count"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:text="Followers"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/followers_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/following_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="0"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/following"
+            app:layout_constraintStart_toStartOf="@+id/following"
+            app:layout_constraintTop_toBottomOf="@+id/following" />
+
+        <TextView
+            android:id="@+id/followers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="0"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/followers"
+            app:layout_constraintStart_toStartOf="@+id/followers"
+            app:layout_constraintTop_toBottomOf="@+id/followers" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/follow"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_below="@id/relative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:minWidth="120dp"
+        android:text="follow"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/isfollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_below="@id/relative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_following"
+        android:textColor="@android:color/holo_red_dark"
+        android:minWidth="120dp"
+        android:visibility="invisible"
+        android:text="following"
+        android:textSize="16dp" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/isfollowing"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Username"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/displayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display name"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/et_style">
+
+        <TextView
+            android:id="@+id/posts_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Posts (0)"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewOthersProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative1"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp" />
+
+
+</RelativeLayout>
